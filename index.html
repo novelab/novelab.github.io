@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>prestalab</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab' rel='stylesheet' type='text/css'>
+  <meta charset=utf-8>
+  <meta name="description" content="this is not a description">
+  <meta name="keywords" content="creative coder">
+
+  <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+  <script src="jquery.panelSnap.js"></script>
+  <link rel="stylesheet" href="style.css"></head>
+
+  <script type="text/javascript">
+    $( document ).ready(function() {
+      var options = {
+        $menu: false,
+        menuSelector: 'a',
+        panelSelector: 'section',
+        namespace: '.panelSnap',
+        onSnapStart: function(){},
+        onSnapFinish: function(){},
+        onActivate: function(){},
+        directionThreshold: 50,
+        slideSpeed: 200
+      };
+      $('body').panelSnap(options);
+
+    });
+  </script>
+
+  <style type="text/css">
+    html {
+      height: 100%;
+    }
+
+    body {
+      color: #476184;
+      background-color: #B3D1FF;
+      font-family: 'Open Sans', sans-serif;
+      font-size:1.50em;
+      line-height:150%;
+
+      margin-top:0px;
+      margin-bottom:0px;
+      margin-right:20px;
+      margin-left:20px;
+
+      height: 100%;
+
+      margin-bottom:100px;
+    }
+
+    @media screen and (min-width:1200px)
+    {
+      #main_container {
+        width: 1200px;
+        height: 100%;
+        margin:0 auto;
+        ffffont-size:0.80em;
+      }
+    }
+
+    #main_container {
+      margin-top:50px;
+      margin-bottom:50px;
+      padding-bottom:100px;
+      height: 100%;
+
+      margin-bottom:200px;
+
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    #content {
+      -moz-box-shadow: 0px 0px 20px 5px #9EC2FD;
+      -webkit-box-shadow: 0px 0px 20px 5px #9EC2FD;
+      -o-box-shadow: 0px 0px 20px 5px #9EC2FD;
+      box-shadow: 0px 0px 20px 5px #9EC2FD;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#9EC2FD, Direction=NaN, Strength=20);
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+            margin-bottom:200px;
+    }
+
+    h1 {
+      color: #476184;
+      font-family: 'Roboto Slab', serif;
+      margin-top:0px;
+      margin-right:100px;
+      margin-left:100px;
+      line-height:120%;
+    }
+
+    h2 {
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-size:0.90em;
+    }
+
+    a:link {
+      color: white
+    }
+
+    a:visited {
+      color: red
+    }
+
+    b {
+      color: white;
+    }
+
+    li {
+      line-height:120%;
+      margin-top:5px;
+      margin-bottom:10px;
+      margin-right:0px;
+      margin-left:0px;
+    }
+
+    #title {
+      padding-top:100px;
+      background-color: #B3D1FF;
+
+      //text-shadow: 0px 0px 10px rgba(158, 194, 253, 1);
+      //text-shadow: 0px 0px 10px rgba(100, 120, 155, 1);
+      text-shadow: 0px 0px 10px rgba(120, 140, 175, 1);
+    }
+
+    .all {
+      -moz-box-shadow: inset 0px 0px 20px 0px #cfcfcf;
+      -webkit-box-shadow: inset 0px 0px 20px 0px #cfcfcf;
+      -o-box-shadow: inset 0px 0px 20px 0px #cfcfcf;
+      box-shadow: inset 0px 0px 20px 0px #cfcfcf;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=NaN, Strength=20);
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      padding-left:20px;
+      padding-right:20px;
+
+      //text-shadow: 0px 0px 25px rgba(163, 163, 163, 0.5);
+
+      height: 100%;
+    }
+
+    #first {
+      padding-top:50px;
+      background-color: #CADFAA;
+
+    }
+
+    #techno {
+      padding-top:50px;
+      background-color: #D3CABD;
+      height: 100%;
+    }
+
+    #contact_us {
+      padding-top:50px;
+      background-color: #FFE168 ;
+    }
+
+    .section {
+      clear: both;
+      padding: 0px;
+      margin: 0px;
+    }
+    .col {
+      display: block;
+      float:left;
+      margin: 1% 0 1% 1.6%;
+    }
+    .col:first-child { margin-left: 0; }
+
+    .group:before,
+    .group:after {
+      content:"";
+      display:table;
+    }
+    .group:after {
+      clear:both;
+    }
+
+    .span_4_of_4 {
+      width: 100%;
+    }
+    .span_3_of_4 {
+      width: 74.6%;
+    }
+    .span_2_of_4 {
+      width: 48%;
+    }
+    .span_1_of_4 {
+      width: 22%;
+    }
+
+    @media only screen and (max-width: 800px) {
+      .col { 
+        margin: 1% 0 1% 0%;
+      }
+      .span_4_of_4 {
+        width: 100%; 
+      }
+      .span_3_of_4 {
+        width: 100%; 
+      }
+      .span_2_of_4 {
+        width: 100%; 
+      }
+      .span_1_of_4 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div id="main_container">
+
+<div id="title" class="snap">
+  <h1>We create, code & build.<br>For you or your customers.</h1>
+</div>  <!-- end of id=title -->
+
+<div id="content">
+
+<div id="first" class="snap all section group">
+  <h1>We do:</h1>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-mobile"></span> Mobile Apps:</h2>
+    <li>Video Game</li>
+    <li>Serious Game</li>
+    <li>Augmented reality</li>
+  </div>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-eye"></span> Hybrid Apps:</h2>
+    <li>Virtual reality</li>
+    <li>Augmented reality</li>
+    <li>Projection mapping</li>
+    <li>Object recognition</li>
+  </div>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-gift"></span> Objects:</h2>
+    <li>Internet of things</li>
+    <li>Saling materials</li>
+    <li>Interactive terminals</li>
+  </div>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-html5"></span> Web Site:</h2>
+    <li>HTM5 canvas</li>
+    <li>Maps</li>
+    <li>Responsive design</li>
+    <li>Advanced Paralax</li>
+  </div>
+  <div class="col span_4_of_4">
+    <br>
+  </div>
+</div>  <!-- end of three_project -->
+
+<div id="techno" class="snap all section group">
+  <h1>We use:</h1>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-console"></span> Software:</h2>
+    <li>C/Cpp</li>
+    <li>Unity3D</li>
+    <li>Occulus Rift</li>
+    <li>OpenFramework</li>
+    <li>OpenCV</li>
+    <li>AudioDsp</li>
+    <li>Shaders</li>
+    <li>Html5 / Node.js</li>
+  </div>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-meter"></span> Sensors:</h2>
+    <li>Kinect</li>
+    <li>Creative 3D cam</li>
+    <li>Leap motion</li>
+    <li>IR Camera</li>
+    <li>All arduino compatible sensor</li>
+  </div>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-power-cord"></span> Electronics:</h2>
+    <li>Raspbery Pi</li>
+    <li>Arduino</li>
+    <li>AudioDsp</li>
+    <li>Fpga</li>
+  </div>
+  <div class="col span_1_of_4">
+    <h2><span class="icon-hammer"></span> Materials</h2>
+    <li>Wood</li>
+    <li>Metal</li>
+    <li>Plexy</li>
+    <li>Plastics</li>
+    <li>Ceramics</li>
+  </div>
+  <div class="col span_4_of_4">
+    <br>
+  </div>
+</div>  <!-- end of techno -->
+
+<div id="contact_us" class="snap all section group">
+  <div class="col span_4_of_4"><h1>Contact:</h1></div>
+  <div class="col span_1_of_4"><br></div>
+  <div class="col span_1_of_4"><h2>paris @<br> prestalab.net</h2></div>
+  <div class="col span_1_of_4"><h2>toulouse @ prestalab.net</h2></div>
+
+<iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/dh7.goi4962i/mm/zoompan,zoomwheel.html?secure=1#13/48.8596/2.3487'></iframe>
+</div>  <!-- end of contact us -->
+
+</div>  <!-- end of id="content" -->
+
+<div id="end" class="">
+  <br>
+</div>  <!-- end of contact us -->
+
+</div>  <!-- end of id=main_containter -->
+
+
+
+</body>
+</html>

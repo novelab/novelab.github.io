@@ -40,6 +40,7 @@ body {
   }
 }
 
+#contact_us,
 #content {
   -moz-box-shadow: 0px 0px 20px 5px #9EC2FD;
   -webkit-box-shadow: 0px 0px 20px 5px #9EC2FD;
@@ -49,8 +50,6 @@ body {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-
-  margin-bottom:200px;
 }
 
 h1 {
@@ -87,6 +86,18 @@ li {
   margin-bottom:10px;
   margin-right:0px;
   margin-left:0px;
+}
+
+/* needed for d3*/
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/* needed for d3*/
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
 }
 
 .section {
@@ -142,7 +153,7 @@ li {
   }
 }
 
-
+#we_are,
 #title1,
 #title2,
 #title3 {

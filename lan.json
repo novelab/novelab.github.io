@@ -1,6 +1,6 @@
 {
   "nodes":[
-    {"name":"PrestaLab","group":2},
+    {"name":"NoveLab","group":2},
     {"name":"London","group":1},
     {"name":"Paris","group":1},
     {"name":"Toulouse","group":1}

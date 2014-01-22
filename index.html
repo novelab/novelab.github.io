@@ -3,210 +3,121 @@
 <html lang="en">
 
 <head>
-  <title>prestalab</title>
+  <title>NoveLab</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab' rel='stylesheet' type='text/css'>
   <meta charset=utf-8>
   <meta name="description" content="this is not a description">
   <meta name="keywords" content="creative coder">
 
   <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
-  <script src="d3.v3.min.js"></script>
+  <script type="text/javascript" src="d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="_/js/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="js/jquery.superscrollorama.js"></script>
+
+  <script type="text/javascript" src="index.js"></script>
 
   <link rel="stylesheet" href="styles.css"></link>
   <link rel="stylesheet" href="icons.css"></link>
 
   <script type="text/javascript">
     $( document ).ready(function() {
-
-      if(window.innerHeight > window.innerWidth){
-          alert("You may prefer the landscape mode on your mobile device");
+      if(window.innerHeight > window.innerWidth) {
+        alert("You may prefer the landscape mode on your mobile device");
       }
-      /*
-      var options = {
-        $menu: false,
-        menuSelector: 'a',
-        panelSelector: 'section',
-        namespace: '.panelSnap',
-        onSnapStart: function(){},
-        onSnapFinish: function(){},
-        onActivate: function(){},
-        directionThreshold: 50,
-        slideSpeed: 200
-      };
-      //$('body').panelSnap(options);
-
-      var snapToPanel = function($target) {
-        var self = this;
-        self.isSnapping = true;
-        //self.$container.trigger('panelsnap:start', [$target]);
-
-        var scrollTarget = 0;
-        if(self.$container.is('body')) {
-          scrollTarget = $target.offset().top;
-        } else {
-          scrollTarget = self.$eventContainer.scrollTop() + $target.position().top;
-        }
-
-        self.$snapContainer.stop(true).animate({
-          scrollTop: scrollTarget
-        }, self.options.slideSpeed, function() {
-          self.scrollOffset = scrollTarget;
-          self.isSnapping = false;
-        });
-        self.activatePanel($target);
-      }
-
-      //snapToPanel($('#techno'));
-    */
-    /* animations */
-    var controller = $.superscrollorama({
-      triggerAtCenter: false,
-      playoutAnimations: true
+      initParalax();
+      initLogo();
     });
-
-    /*logo*/
-    var width = 500,
-        height = 300;
-
-    var color = d3.scale.category20();
-
-    var force = d3.layout.force()
-        .charge(-120)
-        .linkDistance(80)
-        .size([width, height]);
-
-    var svg = d3.select("#logo").append("svg")
-        .attr("width", width)
-        .attr("height", height);
-
-    d3.json("lan.json", function(error, graph) {
-      force
-          .nodes(graph.nodes)
-          .links(graph.links)
-          .start();
-
-      var link = svg.selectAll(".link")
-          .data(graph.links)
-        .enter().append("line")
-          .attr("class", "link")
-          .style("stroke-width", function(d) { return Math.sqrt(d.value); });
-
-      var node = svg.selectAll(".node")
-          .data(graph.nodes)
-        .enter().append("circle")
-          .attr("class", "node")
-          .attr("r", function(d) { if (d.group == 1) return 20; return 30 })
-          .style("fill", function(d) { if (d.group == 1) return "#476184"; return "#476184"; })
-          .call(force.drag);
-
-      node.append("title")
-          .text(function(d) { return d.name; });
-
-      force.on("tick", function() {
-        link.attr("x1", function(d) { return d.source.x; })
-            .attr("y1", function(d) { return d.source.y; })
-            .attr("x2", function(d) { return d.target.x; })
-            .attr("y2", function(d) { return d.target.y; });
-
-        node.attr("cx", function(d) { return d.x; })
-            .attr("cy", function(d) { return d.y; });
-      });
-    });
-  /* end of logo */
-
-  });
-
-</script>
-
+  </script>
 </head>
 
 <body>
-<div id="main_container">
 
 <div id="logo" align="center">
   <br>
   <br>
 </div> 
-<div id="we_are"  align="center">
-  <h1>We are Novelab.</h1>
+<div id="we_are">
+  <h1>We are <span id="novelab">Novelab</span>.</h1>
 </div>
 
-<div id="title1"  align="center">
+<div id="title1">
   <h1>We create</h1>
 </div>
-<div id="title2"  align="center">
-  <h1>amazing things.</h1>
+<div id="title2">
+  <h1>amazing <i>things</i>.</h1>
+  <h1><br></h1>
 </div> 
-<div id="title3"  align="center">
+<div id="title3">
   <h1>For you or your<br> customers.</h1>
 </div> 
 
-<div id="content">
-
-<div id="first" class="snap all section group">
+<div id="we_do" class="section group">
   <h2>We do:</h2>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-mobile"></span> Mobile Apps:</h3>
+  <div class="col span_1_of_3">
+    <h3><span class="icon-mobile"></span><br>Mobile Apps</h3>
     <li>Video Game</li>
     <li>Serious Game</li>
     <li>Augmented reality</li>
   </div>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-eye"></span> Hybrid Apps:</h3>
+  <div class="col span_1_of_3">
+    <h3><span class="icon-eye"></span><br>Hybrid Apps</h3>
     <li>Virtual reality</li>
     <li>Interactive instalations</li>
     <li>Projection mapping</li>
     <li>Object recognition</li>
   </div>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-gift"></span> Objects:</h3>
-    <li>Internet of things</li>
-    <li>Sale materials</li>
-    <li>Interactive terminals</li>
-  </div>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-html5"></span> Web Site:</h3>
+  <div class="col span_1_of_3">
+    <h3><span class="icon-html5"></span><br>Web Site</h3>
     <li>Canvas animation</li>
     <li>Open street maps</li>
     <li>Responsive design</li>
     <li>Advanced Parallax</li>
   </div>
-  <div class="col span_4_of_4">
-    <br>
+  <div class="col span_1_of_3">
+    <h3><span class="icon-gift"></span><br>Connected Objects</h3>
+    <li>Internet of things</li>
+    <li>Sales materials</li>
+    <li>Interactive terminals</li>
+  </div>
+  <div class="col span_1_of_3">
+    <h3><span class="icon-html5"></span><br>Audio</h3>
+    <li>Coding</li>
+    <li>Hardware</li>
+    <li>Sound design</li>
+    <li>Music</li>
   </div>
 </div>  <!-- end of three_project -->
 
-<div id="techno" class="snap all section group">
+<div id="we_use" class="section group">
   <h2>We use:</h2>
   <div class="col span_1_of_4">
-    <h3><span class="icon-console"></span> Software:</h3>
+    <h3><span class="icon-console"></span><br>Software</h3>
     <li>Unity3D</li>
     <li>OpenFramework</li>
     <li>OpenCV</li>
-    <li>Html5</li>
     <li>Node.js</li>
   </div>
   <div class="col span_1_of_4">
-    <h3><span class="icon-meter"></span> Hardware:</h3>
+    <h3><span class="icon-meter"></span><br>Hardware</h3>
     <li>Occulus Rift</li>
     <li>Kinect</li>
     <li>Leap motion</li>
     <li>IR Camera</li>
   </div>
   <div class="col span_1_of_4">
-    <h3><span class="icon-power-cord"></span> Electronics:</h3>
+    <h3><span class="icon-power-cord"></span><br>Electronics</h3>
     <li>Raspbery Pi</li>
     <li>Arduino</li>
     <li>BeagleBoard</li>
     <li>Dsp (Audio)</li>
-    <li>Fpga</li>
   </div>
   <div class="col span_1_of_4">
-    <h3><span class="icon-hammer"></span> Materials:</h3>
+    <h3><span class="icon-hammer"></span><br>Materials</h3>
     <li>Wood</li>
     <li>Metal</li>
     <li>Plexy</li>
-    <li>Plastic</li>
     <li>Ceramic</li>
   </div>
   <div class="col span_4_of_4">
@@ -214,45 +125,36 @@
   </div>
 </div>  <!-- end of techno -->
 
+<div id="reference" class="section group">
+  <h2>They trust us:</h2>
+  <div class="col span_2_of_4">
+    <img src="images/sony.jpg"/>
+  </div>
+  <div class="col span_2_of_4">
+    <img src="images/arte.jpg"/>
+  </div>
+  <div class="col span_2_of_4">
+    <img src="images/agate.jpg"/>
+  </div>
+  <div class="col span_2_of_4">
+    <img src="images/roli.jpg"/>
+  </div>
+  <div class="new_col span_2_of_4">
+    <img src="images/afpa.png"/>
+  </div>
 
-</div>  <!-- end of id=main_containter -->
-
-<div id="inter" class="">
-  <br>
-  <br>
-</div>  <!-- end of contact us -->
+  <div class="col span_4_of_4">
+    <br>
+  </div>
+</div>  <!-- end of techno -->
 
 <div id="contact_us">
   <div class="col span_4_of_4"><h2>Contact:</h2></div>
-  <div class="col span_1_of_4"><h3>London @<br> prestalab.net</h3></div>
-  <div class="col span_1_of_4"><h3>Paris @<br> prestalab.net</h3></div>
-  <div class="col span_1_of_4"><h3>Toulouse @ prestalab.net</h3></div>
+  <div class="col span_1_of_3"><h3>London<br> @novelab.io</h3></div>
+  <div class="col span_1_of_3"><h3>Paris<br>  @novelab.io</h3></div>
+  <div class="col span_1_of_3"><h3>Toulouse<br> @novelab.io</h3></div>
   <iframe width='100%' height='500px' frameBorder='0' src='https://a.tiles.mapbox.com/v3/dh7.goi4962i/mm/zoompan.html?secure=1#12/48.8567/2.3428'></iframe>
 </div>  <!-- end of contact us -->
-
-<div id="end" class="">
-  <br>
-  <br>
-</div>  <!-- end of contact us -->
-
-</div>  <!-- end of id="content" -->
-
-
-
-  <script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="_/js/jquery-1.9.1.min.js"><\/script>')</script>
-    <script src="js/jquery.superscrollorama.js"></script>
-  <script>
-    $(document).ready(function() {
-      var controller = $.superscrollorama();
-      // individual element tween examples
-      controller.addTween('#title1', TweenMax.from( $('#title1'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-      controller.addTween('#title2', TweenMax.from( $('#title2'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-      controller.addTween('#title3', TweenMax.from( $('#title3'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-      controller.addTween('#content', TweenMax.from( $('#content'), .5, {css:{opacity: 0}}));
-    });
-  </script>
 
 </body>
 </html>

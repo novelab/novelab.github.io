@@ -5,7 +5,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.50em;
+  font-size: 1.5em;
   line-height: 150%;
 
   margin-top: 0px;
@@ -27,7 +27,7 @@ h1 {
   margin-top:0px;
   aamargin-right:100px;
   aamargin-left:100px;
-  line-height:120%;
+  line-height:100%;
 
   text-align: center;
 }
@@ -35,37 +35,78 @@ h1 {
 h2 {
   color: #005B63;
   font-family: 'Roboto Slab', serif;
-  font-size: 2.5em;
+  font-size: 3em;
 
   margin-top:0px;
-  line-height:120%;
+  line-height:100%;
 
   text-align: center;
 }
 
 h3 {
   color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  font-size:1em;
-
-  text-align: left;
-}
-
-h3 {
-  color: #ffffff;
-  font-family: 'Open Sans', sans-serif;
-  font-size:1em;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size:1.5em;
 
   text-align: left;
 }
 
 li {
   color: #005B63;
-  line-height:120%;
+  line-height:100%;
   margin-top:5px;
   margin-bottom:10px;
   margin-right:0px;
   margin-left:0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size:1.5em;
+}
+
+#headerimage {
+  clear: both;
+  background: #fff url("images/lab.jpg") no-repeat 0 0;
+  background-position:center;
+  background-attachment: fixed;
+  margin: 0px;
+  color: #fff;
+  swidth: 100%;
+  min-height: 100%;
+}
+
+#bandeau_one {
+  clear: both;
+  background: #fff url("images/oculus.jpg") no-repeat 0 0;
+  background-position:center;
+  margin: 0px;
+  color: #fff;
+  height: 500px;
+}
+
+#bandeau_two {
+  clear: both;
+  background: #fff url("images/atelier.jpg") no-repeat 0 0;
+  background-position:center;
+  margin: 0px;
+  color: #fff;
+  height: 500px;
+}
+
+#bandeau_three {
+  clear: both;
+  background: #fff url("images/unity3D.jpg") no-repeat 0 0;
+  background-position:center;
+  margin: 0px;
+  color: #fff;
+  height: 500px;
+}
+
+#bandeau_four {
+  clear: both;
+  background: #fff url("images/atelier.jpg") no-repeat 0 0;
+  background-position:center;
+  margin: 0px;
+  color: #fff;
+  height: 500px;
 }
 
 #novelab {
@@ -125,11 +166,11 @@ li {
 
 /* needed for d3*/
 .node {
-  stroke: #fff;
+  stroke: #ffffff;
   stroke-width: 1.5px;
 }
 .link {
-  stroke: #999;
+  stroke: #ffffff;
   stroke-opacity: .6;
 }
 /* end of needed for d3*/
@@ -179,7 +220,6 @@ li {
   padding-left: 5%;
   padding-right: 0%;
 }
-
 .span_1_of_3 {
   width: 27%;
   margin-left: 0px;
@@ -187,7 +227,7 @@ li {
   padding-right: 0%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .col { 
     margin: 0 0 0 0;
   }
@@ -204,6 +244,42 @@ li {
     width: 100%;
     margin-left: 100px;
   }
+  .span_1_of_3 {
+    width: 100%;
+    margin-left: 100px;
+  }
+
 }
 
 /* end of fuild grid */
+
+/* begin of slide */
+  /* Prevent the slideshow from flashing on load */
+  #slides {
+    display: none
+  }
+
+  /* Center the slideshow */
+  .container {
+    margin: 0 auto
+    width: 100%;
+  }
+
+  /* Show active item in the pagination */
+  .slidesjs-pagination .active {
+    color:red;
+  }
+
+  /* Media quires for a responsive layout */
+
+  /* For tablets & smart phones */
+  @media (max-width: 767px) {
+    body {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .container {
+      width: auto
+    }
+  }
+/* end of slider */

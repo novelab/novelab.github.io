@@ -2,11 +2,10 @@
 
 initParalax = function() {
   var controller = $.superscrollorama();
-  controller.addTween('#title1', TweenMax.from( $('#title1'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-  controller.addTween('#title2', TweenMax.from( $('#title2'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
-  controller.addTween('#title3', TweenMax.from( $('#title3'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
+  controller.addTween('#title1', TweenMax.from( $('#title1'), .5, {css:{right:'2000px'}, ease:Quad.easeInOut}));
+  controller.addTween('#title2', TweenMax.from( $('#title2'), .5, {css:{right:'2000px'}, ease:Quad.easeInOut}));
+  controller.addTween('#title3', TweenMax.from( $('#title3'), .5, {css:{right:'2000px'}, ease:Quad.easeInOut}));
   controller.addTween('#we_do', TweenMax.from( $('#we_do'), .5, {css:{opacity: 0}}));
-
 }
 
 initLogo = function() {

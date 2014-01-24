@@ -138,6 +138,12 @@ li {
   min-height: 100%;
 }
 
+#carte {
+  border: 0px;
+  height: 500px;
+  width: 100%;
+}
+
 /* needed for d3*/
 .node {
   stroke: #ffffff;

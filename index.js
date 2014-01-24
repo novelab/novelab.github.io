@@ -57,3 +57,23 @@ initLogo = function() {
     });
   });
 }
+
+initSlide = function() {
+  $('#slides').slidesjs({
+    width: 1920,
+    height: 600,
+    play: {
+      active: false,
+      auto: true,
+      interval: 3000,
+      swap: true,
+      pauseOnHover: true,
+      restartDelay: 2500
+    },
+    pagination: {
+      active: false,
+      effect: "slide"
+    },
+    navigation: false
+  });
+}

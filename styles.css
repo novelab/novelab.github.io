@@ -1,19 +1,28 @@
 html {
   height: 100%;
-  width: 100%;
 }
 
 body {
+  height: 100%;
   font-size: 1.5em;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;
 
-  height: 100%;
-  width: 100%;
-
   background-color: #E0D4B1;
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 1em;
+  }
 }
 
 h1, h2, h3 {
@@ -26,6 +35,18 @@ h1 {
   color: #005B63;
   font-size: 5em;
   text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 1em;
+  }
 }
 
 h2 {
@@ -65,8 +86,14 @@ li {
   background-attachment: fixed;
   margin: 0px;
   color: #fff;
-  swidth: 100%;
+  width: 100%;
   min-height: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+#headerimage {
+    background-attachment: scroll;
+  }
 }
 
 #logo {
@@ -125,6 +152,7 @@ li {
   text-align: center;
   border: 0px solid #333333;
   margin: 0px;
+  margin-bottom: 50px;
   padding: 0px;
   display: block;
   text-align: left;
@@ -136,10 +164,15 @@ li {
   min-height: 100%;
 }
 
+#contact_us h3 {
+  padding-top: 50px;
+}
+
 #carte {
   margin-top: 50px;
   border: 0px;
   height: 500px;
+  max-height: 90%;
   width: 100%;
 }
 
@@ -190,7 +223,6 @@ li {
 .span_2_of_4 {
   width: 30%;
   padding-left: 10%;
-  padding-right: 10%;
   float: left;
 }
 .span_1_of_4 {
@@ -206,7 +238,7 @@ li {
   padding-right: 0%;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 360px) {
   .col { 
     margin: 0 0 0 0;
   }
@@ -217,15 +249,16 @@ li {
     width: 100%;
   }
   .span_2_of_4 {
-    width: 100%;
+    width: 90%;
+    padding-left: 10%;
   }
   .span_1_of_4 {
-    width: 100%;
-    margin-left: 100px;
+    width: 90%;
+    padding-left: 10%;
   }
   .span_1_of_3 {
-    width: 100%;
-    margin-left: 100px;
+    width: 90%;
+    padding-left: 10%;
   }
 }
 /* end of fuild grid */

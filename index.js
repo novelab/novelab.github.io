@@ -9,8 +9,8 @@ initParalax = function() {
 }
 
 initLogo = function() {
-  var width = 300,
-      height = 200;
+  var width = $(window).width();
+  var height =$(window).height()/2;
 
   var color = d3.scale.category20();
 

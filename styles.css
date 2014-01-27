@@ -13,18 +13,6 @@ body {
   background-color: #E0D4B1;
 }
 
-@media only screen and (max-width: 640px) {
-  body {
-    font-size: 0.75em;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  body {
-    font-size: 1em;
-  }
-}
-
 h1, h2, h3 {
   font-family: 'Roboto Slab', serif;
   margin-top:0px;
@@ -37,18 +25,6 @@ h1 {
   text-align: center;
 }
 
-@media only screen and (max-width: 640px) {
-  h1 {
-    font-size: 4em;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  body {
-    font-size: 1em;
-  }
-}
-
 h2 {
   color: #005B63;
   font-size: 3em;
@@ -57,7 +33,7 @@ h2 {
 
 h3 {
   color: #ffffff;
-  font-size:1.5em;
+  font-size:1.2em;
   margin-bottom:0px;
   text-align: left;
 }
@@ -81,17 +57,57 @@ li {
 
 #headerimage {
   clear: both;
-  background: #fff url("images/lab.jpg") no-repeat 0 0;
-  background-position:center;
+  background: url("images/lab.jpg");;
+  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
   margin: 0px;
-  color: #fff;
   width: 100%;
   min-height: 100%;
 }
 
+/* this is for ipad landscape/protrait mode */ 
+@media only screen and (max-device-width: 1024px) {
+  body {
+    font-size: 1.2em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  li {
+    font-size:1em;
+  }
+  #headerimage {
+    background-attachment: scroll;
+  }
+}
+
+
+/* this is for mobile landscape mode */ 
 @media only screen and (max-width: 640px) {
-#headerimage {
+  body {
+    font-size: 0.7em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h3 {
+    font-size:1.5em;
+  }
+  #headerimage {
+    background-attachment: scroll;
+  }
+}
+
+/* this is for mobile portrait mode */
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 1em;
+  }
+  h3 {
+    font-size:1.5em;
+  }
+  #headerimage {
     background-attachment: scroll;
   }
 }

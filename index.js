@@ -11,13 +11,17 @@ initParalax = function() {
 initLogo = function() {
   var width = $(window).width();
   var height =$(window).height()/2;
+  var logo_size = Math.min(height/10., 30.);
 
   var color = d3.scale.category20();
 
   var force = d3.layout.force()
-      .charge(-120)
-      .linkDistance(80)
+      .charge(-logo_size*4)
+      .linkDistance(logo_size*3)
       .size([width, height]);
+
+  d3.select("svg")
+      .remove();
 
   var svg = d3.select("#logo").append("svg")
       .attr("width", width)
@@ -33,13 +37,13 @@ initLogo = function() {
         .data(graph.links)
       .enter().append("line")
         .attr("class", "link")
-        .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+        .style("stroke-width", function(d) { return logo_size/3.; });
 
     var node = svg.selectAll(".node")
         .data(graph.nodes)
       .enter().append("circle")
         .attr("class", "node")
-        .attr("r", function(d) { if (d.group == 1) return 20; return 30 })
+        .attr("r", function(d) { if (d.group == 1) return logo_size*2/3.; return logo_size })
         .style("fill", function(d) { if (d.group == 1) return "#005B63"; return "#005B63"; })
         .call(force.drag);
 
@@ -57,6 +61,11 @@ initLogo = function() {
     });
   });
 }
+
+function doOnOrientationChange() {
+  initLogo();
+}
+window.addEventListener('orientationchange', doOnOrientationChange);
 
 initSlide = function() {
   $('#slides').slidesjs({

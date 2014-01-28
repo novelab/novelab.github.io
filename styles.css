@@ -1,3 +1,5 @@
+/* CSS for NoveLab */
+
 html {
   height: 100%;
 }
@@ -62,7 +64,7 @@ a {
 
 #headerimage {
   clear: both;
-  background: url("images/lab.jpg");;
+  background: url("images/lab_hd.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -83,6 +85,9 @@ a {
     font-size:1em;
   }
   #headerimage {
+    background: url("images/lab.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-attachment: scroll;
   }
 }

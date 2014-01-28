@@ -44,7 +44,7 @@ initLogo = function() {
       .enter().append("circle")
         .attr("class", "node")
         .attr("r", function(d) { if (d.group == 1) return logo_size*2/3.; return logo_size })
-        .style("fill", function(d) { if (d.group == 1) return "#005B63"; return "#005B63"; })
+        .style("fill", function(d) { if (d.group == 1) return "#00A5A6"; return "#00A5A6"; }) //"#005B63
         .call(force.drag);
 
     node.append("title")

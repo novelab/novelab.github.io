@@ -62,10 +62,8 @@ initLogo = function() {
   });
 }
 
-function doOnOrientationChange() {
-  initLogo();
-}
-window.addEventListener('orientationchange', doOnOrientationChange);
+window.addEventListener('orientationchange', initLogo);
+window.addEventListener('resize', initLogo);
 
 initSlide = function() {
   $('#slides').slidesjs({

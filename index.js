@@ -2,11 +2,21 @@
 
 initParalax = function() {
   var controller = $.superscrollorama();
+  controller.addTween('#title1', TweenMax.from( $('#title1'),.3,{css:{right:'2000px'},ease:Quad.easeInOut}),0,-300);
+  controller.addTween('#title2', TweenMax.from( $('#title2'), .3,{css:{right:'2000px'},ease:Quad.easeInOut}),0,-300);
+  controller.addTween('#title3', TweenMax.from( $('#title3'), .3,{css:{right:'2000px'},ease:Quad.easeInOut}),0,-300);
+  controller.addTween('#we_do', TweenMax.from( $('#we_do'), .5,{css:{opacity: 0}}));
+  controller.addTween('#reference', TweenMax.from( $('#reference'), .5, {css:{opacity: 0}}),0,-300);;
+  controller.addTween('#contact_us', TweenMax.from( $('#contact_us'), .5, {css:{opacity: 0}}));
+}
+
+/*initParalax = function() {
+  var controller = $.superscrollorama();
   controller.addTween('#title1', TweenMax.from( $('#title1'), .5, {css:{right:'2000px'}, ease:Quad.easeInOut}));
   controller.addTween('#title2', TweenMax.from( $('#title2'), .5, {css:{right:'2000px'}, ease:Quad.easeInOut}));
   controller.addTween('#title3', TweenMax.from( $('#title3'), .5, {css:{right:'2000px'}, ease:Quad.easeInOut}));
   controller.addTween('#we_do', TweenMax.from( $('#we_do'), .5, {css:{opacity: 0}}));
-}
+}*/
 
 initLogo = function() {
   var width = $(window).width();

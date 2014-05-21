@@ -5,8 +5,8 @@
   <title>NoveLab</title>
   <meta charset=utf-8>
 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Slab|Roboto:300,100' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700%7CRoboto+Slab%7CRoboto:300,100' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="favicon.ico" />
 
   <meta name="description" content="this is not a description">
   <meta name="keywords" content="creative coder">
@@ -17,12 +17,16 @@
   <script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
   <script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
   <script type="text/javascript" src="jquery.slides.min.js"></script>
+  
 
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="icons.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/component.css">
+
 
   <script type="text/javascript">
     $( document ).ready(function() {
@@ -81,173 +85,318 @@ Magritte, La trahison des images.
 
 <body>
 
-<div id = "headerimage">
-  <div id="logo">
-    <br>
-    <br>
+  <div id = "headerimage">
+    <div id="logo">
+      <br>
+      <br>
+    </div> 
+    <div id="we_are">
+      <h1>We are <span id="novelab">Novelab</span>.</h1>
+    </div>
+  </div>
+
+
+  <div id="title1">
+    <h1>We create</h1>
+  </div>
+  <div id="title2">
+    <h1>amazing <i>things</i>.</h1>
   </div> 
-  <div id="we_are">
-    <h1>We are <span id="novelab">Novelab</span>.</h1>
-  </div>
-</div>
+  <div id="title3">
+    <h1>For you or your<br> customers.</h1>
+    <h1><br></h1>
+  </div> 
 
-<div id="title1">
-  <h1>We create</h1>
-</div>
-<div id="title2">
-  <h1>amazing <i>things</i>.</h1>
-</div> 
-<div id="title3">
-  <h1>For you or your<br> customers.</h1>
-  <h1><br></h1>
-</div> 
 
-<div id="we_do">
-  <h2>We do:</h2>
-  <div class="section group">
-    <div class="col span_1_of_3">
-      <h3><span class="icon-mobile"></span> Mobile apps</h3>
+  <div id="we_do">
+    <h2>We do:</h2>
+    <div class="section group">
+      <div class="col span_1_of_3">
+        <h3><span class="icon-mobile"></span> Mobile apps</h3>
+        <ul>
+          <li>Video game</li>
+          <li>Serious game</li>
+          <li>Augmented reality</li>
+          <li>3D modeling</li>
+        </ul>
+      </div>
+      <div class="col span_1_of_3">
+        <h3><span class="icon-eye"></span> Hybrid apps</h3>
+        <ul>
+          <li>Virtual reality</li>
+          <li>Interactive instalations</li>
+          <li>Projection mapping</li>
+          <li>Object recognition</li>
+        </ul>
+      </div>
+      <div class="col span_1_of_3">
+        <h3><span class="icon-html5"></span> Web</h3>
+        <ul>
+          <li>Canvas animation</li>
+          <li>Open street maps</li>
+          <li>Responsive design</li>
+          <li>Advanced parallax</li>
+        </ul>
+      </div>
+    </div>
+    <div  class="section group">
+      <div class="col span_1_of_3">
+        <h3><span class="icon-gift"></span> Hardware</h3>
+        <ul>
+          <li>Internet of things</li>
+          <li>Sales materials</li>
+          <li>Interactive terminals</li>
+        </ul>
+      </div>
+      <div class="col span_1_of_3">
+        <h3><span class="icon-volume-medium"></span> Audio</h3>
+        <ul>
+          <li>Coding</li>
+          <li>Hardware</li>
+          <li>Sound design</li>
+          <li>Music</li>
+        </ul>
+      </div>
+      <div class="col span_1_of_3">
+        <h3><span class="icon-hammer"></span> Rapid Prototyping</h3>
+        <ul>
+          <li>Proof of concept</li>
+          <li>Software mock-ups (Apps, games, ...)</li>
+          <li>Hardware mock-ups</li>
+        </ul>
+      </div>
+    </div>
+  </div>  <!-- end of we use -->
+
+
+
+
+  <div class="slide_container">
+
+      <div class="mediabox" id="typerider">
+        <img src="images/typerider.png" alt="TypeRider" />
+      </div>
+        <div id="typerider_view" class="modal">
+          <!-- <button type="button" id="typerider_close" class="overlay-close"></button> -->
+          <div class='articles'>
+                <img src="images/typerider.png" alt="TypeRider" />
+                <h3>TYPE:RIDER</h3>
+                <iframe id="typerider_vimeo" src="http://player.vimeo.com/video/92312576" width="100%" height="281" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p>Type:Rider is an award winning video game.
+                  We did the project management of the whole project and build the interactive installation related to the project.
+                  </br> <a href="http://typerider.arte.tv/" target="_blank"> More infos : http://typerider.arte.tv/</a>   
+                  <a href="https://itunes.apple.com/fr/app/type-rider/id667443268?mt=8" target="_blank"><img src="images/ios.png" width="50px"></a>
+                  <a href="https://play.google.com/store/apps/details?id=com.bulkypix.typerider" target="_blank"><img src="images/android.png" width="50px"></a>
+                </p>
+          </div>
+        </div>    
+
+      <div class="mediabox" id="parvis">
+        <img src="images/parvis.png" alt="Parvis" />
+      </div>
+        <div id="parvis_view" class="modal">
+            <div class='articles'> 
+                  <img src="images/Parvis.png" alt="Parvis" />
+                  <h3>PARVIS</h3>
+                  <p>PARVIS is a set of small games with unified interface. These games allow pedagogical assessment of student interns in the civil engineering sector. These skills can be learned outside the game or in the game (by trial and error).
+                  </p>
+            </div>
+          </div>
+
+      <div class="mediabox" id="motorsmob">
+        <img src="images/motorsmob.png" alt="MotorsMob"/>
+      </div>
+        <div id="motorsmob_view" class="modal">
+            <div class='articles'>
+                  <img src="images/motorsmob.png" alt="MotorsMob" />
+                  <h3>MOTORSMOB</h3>
+                  <p>MotorsMob is an engine sound synthesizer available on Android & iOS (soon). It simulates realistic existing cars as well as futuristic ones</p> 
+                  <p> <a href="http://www.audiogaming.net/" target="_blank">More info</a>
+                  <a href="https://itunes.apple.com/us/app/motorsmob/id860498413?mt=8" target="_blank"><img src="images/ios.png" width="50px"></a>  
+                  <a href="https://play.google.com/store/apps/details?id=com.AudioGaming.MotorsMobDemo" target="_blank"><img src="images/android.png" width="50px" alt="MotorsMob"/></a> 
+            </div>
+          </div>
+
+      <div class="mediabox" id="realhuman">
+        <img src="images/realhuman.png" alt="Real Human" />
+      </div>
+        <div id="realhuman_view" class="modal">
+            <div class='articles'>
+                  <img src="images/realhuman.png" alt="oculus" />
+                  <h3>REAL HUMAN</h3>
+                  <p>
+                    The Atsugi robotics web site allow user to clone themselves.
+                    <a href="http://realhumans.arte.tv/atsugirobotics/fr/#!/build/result">More infos soon !</a>
+                  </p>
+            </div>
+          </div>  
+
+      <div class="mediabox" id="chickendoom">
+        <img src="images/chickendoom.png" alt="Chicken Doom " />
+      </div>
+        <div id="chickendoom_view" class="modal">
+            <div class='articles'>
+                  <img src="images/chickendoom.png" alt="Chicken Doom " />
+                  <h3>CHICKEN DOOM</h3>
+                  <iframe id="chickendoom_vimeo" src="//player.vimeo.com/video/92316781" width="100%" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <p> <a href="http://www.bulkypix.com/game/chicken-doom" target="_blank">More info</a>       
+                  <a href="https://itunes.apple.com/fr/app/chicken-doom/id530444566?mt=8" target="_blank"><img src="images/ios.png" width="50px"></a>
+                  </p>      
+            </div>
+        </div>
+
+        <div class="mediabox" id="holyshield">
+        <img src="images/holyshield.png" alt="Holy Shield" />
+      </div>
+        <div id="holyshield_view" class="modal">
+            <div class='articles'>
+                  <img src="images/holyshield.png" alt="Holy Shield" />
+                  <h3>JOURNEY TO HELL</h3>
+                  <iframe id="holyshield_vimeo" src="//player.vimeo.com/video/92327798" width="100%" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>      
+                <p>  
+                 <a href="http://www.bulkypix.com/game/journey-to-hell" target="_blank">More info</a>        
+                  <a href="https://itunes.apple.com/fr/app/journey-to-hell/id572841607?mt=8" target="_blank"><img src="images/ios.png" width="50px"></a>
+                </p>
+            </div>
+        </div>
+
+      <div class="mediabox" id="oculus">
+        <img src="images/roche_oculus.png" alt="Oculus Rift" />
+      </div>
+        <div id="oculus_view" class="modal">
+            <div class='articles'>
+                  <img src="images/roche_oculus.png" alt="Oculus Rift" />
+                  <h3>VIRTUAL REALITY APPLICATION</h3>    
+                <p>  
+                   Using Oculus rift we create incredible immersive experiences from customer 2D assets and Video.
+                </p>
+
+            </div>
+        </div>
+
+      <div class="mediabox" id="3D_scanning">
+              <img src="images/3D_scanning.png" alt="3D scanning" />
+            </div>
+              <div id="3D_scanning_view" class="modal">
+                  <div class='articles'>
+                        <img src="images/3D_scanning.png" alt="live 3D scanning" />
+                        <h3>3D scanning</h3>    
+                      <p>  
+                        Live 3D scanning
+                      </p>
+
+                  </div>
+              </div>
+
+      <div class="mediabox" id="custom_3D">
+        <img src="images/custom_3D.png" alt="Custom 3D" />
+      </div>
+        <div id="custom_3D_view" class="modal">
+            <div class='articles'>
+                  <img src="images/custom_3D.png" alt="custom 3D" />
+                  <h3>3D scanning</h3>    
+                <p>  
+                  Custom 3D from pictures and then print 3D modeling and color printing.
+                </p>
+
+            </div>
+        </div>
+
+
+      
+
+
+  </div>  <!-- end of container slide show -->
+
+
+
+
+  <div id="we_use" class="section group">
+    <h2>We use:</h2>
+    <div class="col span_1_of_4">
+      <h3><span class="icon-console"></span><br>Software</h3>
       <ul>
-        <li>Video game</li>
-        <li>Serious game</li>
-        <li>Augmented reality</li>
-        <li>3D modeling</li>
+        <li>Unity3D</li>
+        <li>OpenFrameworks</li>
+        <li>OpenCV</li>
+        <li>Node.js</li>
       </ul>
     </div>
-    <div class="col span_1_of_3">
-      <h3><span class="icon-eye"></span> Hybrid apps</h3>
+    <div class="col span_1_of_4">
+      <h3><span class="icon-meter"></span><br>Hardware</h3>
       <ul>
-        <li>Virtual reality</li>
-        <li>Interactive instalations</li>
-        <li>Projection mapping</li>
-        <li>Object recognition</li>
+        <li>Occulus Rift</li>
+        <li>Kinect</li>
+        <li>Leap motion</li>
+        <li>IR camera</li>
       </ul>
     </div>
-    <div class="col span_1_of_3">
-      <h3><span class="icon-html5"></span> Web</h3>
+    <div class="col span_1_of_4">
+      <h3><span class="icon-power-cord"></span><br>Electronics</h3>
       <ul>
-        <li>Canvas animation</li>
-        <li>Open street maps</li>
-        <li>Responsive design</li>
-        <li>Advanced parallax</li>
+        <li>Raspbery Pi</li>
+        <li>Arduino</li>
+        <li>BeagleBoard</li>
+        <li>Dsp (Audio)</li>
       </ul>
     </div>
-  </div>
-  <div  class="section group">
-    <div class="col span_1_of_3">
-      <h3><span class="icon-gift"></span> Hardware</h3>
+    <div class="col span_1_of_4">
+      <h3><span class="icon-hammer"></span><br>Materials</h3>
       <ul>
-        <li>Internet of things</li>
-        <li>Sales materials</li>
-        <li>Interactive terminals</li>
-      </ul>
-    </div>
-    <div class="col span_1_of_3">
-      <h3><span class="icon-volume-medium"></span> Audio</h3>
-      <ul>
-        <li>Coding</li>
-        <li>Hardware</li>
-        <li>Sound design</li>
-        <li>Music</li>
+        <li>Wood</li>
+        <li>Metal</li>
+        <li>Plexy</li>
+        <li>Ceramic</li>
       </ul>
     </div>
     <div class="col span_4_of_4">
       <br>
     </div>
-  </div>
-</div>  <!-- end of we use -->
+  </div>  <!-- end of we use -->
 
-<div class="slide_container">
-  <div id="slides">
-    <img src="images/vr.jpg" alt="oculus rift">
-    <img src="images/interface.jpg" alt="interface midi">
-    <img src="images/unity3D.jpg" alt="unity3D">
-    <img src="images/elec.jpg" alt="electronics">
-    <img src="images/mac.jpg" alt="coding">
-    <img src="images/typerider.jpg" alt="Type:Rider">
-    <img src="images/jth.jpg" alt="Journey To Hell">
-    <img src="images/tobias.jpg" alt="tobias atelier">
-  </div>
-</div>  <!-- end of container slide show -->
 
-<div id="we_use" class="section group">
-  <h2>We use:</h2>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-console"></span><br>Software</h3>
-    <ul>
-      <li>Unity3D</li>
-      <li>OpenFrameworks</li>
-      <li>OpenCV</li>
-      <li>Node.js</li>
-    </ul>
-  </div>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-meter"></span><br>Hardware</h3>
-    <ul>
-      <li>Occulus Rift</li>
-      <li>Kinect</li>
-      <li>Leap motion</li>
-      <li>IR camera</li>
-    </ul>
-  </div>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-power-cord"></span><br>Electronics</h3>
-    <ul>
-      <li>Raspbery Pi</li>
-      <li>Arduino</li>
-      <li>BeagleBoard</li>
-      <li>Dsp (Audio)</li>
-    </ul>
-  </div>
-  <div class="col span_1_of_4">
-    <h3><span class="icon-hammer"></span><br>Materials</h3>
-    <ul>
-      <li>Wood</li>
-      <li>Metal</li>
-      <li>Plexy</li>
-      <li>Ceramic</li>
-    </ul>
-  </div>
-  <div class="col span_4_of_4">
-    <br>
-  </div>
-</div>  <!-- end of we use -->
 
-<div id="reference" class="section group">
-  <h2>They trust us:</h2>
-  <div class="col span_1_of_3">
-    <img src="images/sony.jpg" alt="sony logo">
-  </div>
-  <div class="col span_1_of_3">
-    <img src="images/arte.jpg" alt="arte logo">
-  </div>
-  <div class="col span_1_of_3">
-    <img src="images/agate.jpg" alt="agate logo">
-  </div>
-  <div class="col span_1_of_3">
-    <img src="images/roli.jpg" alt="roli logo">
-  </div>
-  <div class="col span_1_of_3">
-    <img src="images/afpa.png" alt="afpa logo">
-  </div>
-  <div class="col span_1_of_3">
-    <img src="images/thales.jpg" alt="thales logo">
-  </div>
-  <div class="col span_1_of_3">
-    <img src="images/diplo.jpg" alt="diplomatic covers logo">
-  </div>
-  <div class="col span_4_of_4">
-    <br>
-  </div>
-</div>  <!-- end of contact reference -->
+  <div id="reference" class="section group">
+    <h2>They trust us:</h2>
+    <div class="col span_1_of_3">
+      <img src="images/sony.jpg" alt="sony logo">
+    </div>
+    <div class="col span_1_of_3">
+      <img src="images/arte.jpg" alt="arte logo">
+    </div>
+    <div class="col span_1_of_3">
+      <img src="images/agate.jpg" alt="agate logo">
+    </div>
+     <div class="col span_1_of_3">
+      <img src="images/publicis_groupe.jpg" alt="publicis groupe logo">
+    </div>
+    <div class="col span_1_of_3">
+      <img src="images/roli.jpg" alt="roli logo">
+    </div>
+     <div class="col span_1_of_3">
+      <img src="images/diplo.jpg" alt="diplomatic covers logo">
+    </div>
+    <div class="col span_1_of_3">
+      <img src="images/thales.jpg" alt="thales logo">
+    </div>
+    <div class="col span_1_of_3">
+      <img src="images/afpa.png" alt="afpa logo">
+    </div>
+    <div class="col span_4_of_4">
+      <br>
+    </div>
+  </div>  <!-- end of contact reference -->
 
-<div id="contact_us">
-  <div class="col span_4_of_4"><h2>Contact:</h2></div>
-  <div class="col span_1_of_3"><h3><a href="mailto:london@novelab.net">London<br> @novelab.net</a></h3></div>
-  <div class="col span_1_of_3"><h3><a href="mailto:paris@novelab.net">Paris<br>  @novelab.net</a></h3></div>
-  <div class="col span_1_of_3"><h3><a href="mailto:toulouse@novelab.net">Toulouse<br> @novelab.net</a></h3></div>
-  <iframe id="carte" height='500' src='https://a.tiles.mapbox.com/v3/dh7.goi4962i/mm/zoompan.html?secure=1#12/48.8567/2.3428'></iframe>
-</div>  <!-- end of contact us -->
 
+  <div id="contact_us">
+    <div class="col span_4_of_4"><h2>Contact:</h2></div>
+    <div class="col span_1_of_3"><h3><a href="mailto:london@novelab.net">London<br> @novelab.net</a></h3></div>
+    <div class="col span_1_of_3"><h3><a href="mailto:paris@novelab.net">Paris<br>  @novelab.net</a></h3></div>
+    <div class="col span_1_of_3"><h3><a href="mailto:toulouse@novelab.net">Toulouse<br> @novelab.net</a></h3></div>
+    <iframe id="carte" height='500' src='https://a.tiles.mapbox.com/v3/dh7.goi4962i/mm/zoompan.html?secure=1#12/48.8567/2.3428'></iframe>
+  </div>  <!-- end of contact us -->
+
+
+ <!-- end of div id=main  -->
 </body>
 </html>

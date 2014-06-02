@@ -128,7 +128,7 @@ a {
   padding: 0em 1.5em 0em 1.5em ;
   text-align: justify;
   color: #000000;
-  font-size:0.8em;
+  font-size: 14px;
   background-color: #FFFFE3;
 }
 
@@ -140,7 +140,19 @@ a {
 }
 
 
-
+.overlay-close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    overflow: hidden;
+    border: medium none;
+    background: url('images/cross.png') no-repeat scroll center center transparent;
+    text-indent: 100%;
+    outline: medium none;
+    z-index: 100;
+}
 
 
 
@@ -365,6 +377,10 @@ a {
     width: 90%;
     padding-left: 10%;
   }
+
+
+
+
 }
 /* end of fuild grid */
 

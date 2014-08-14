@@ -21,6 +21,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 			
 	});
 	
@@ -41,6 +42,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 	});
 		$('#dentressengle_view').click(function(){		
 			$(this).css('visibility', 'hidden');
@@ -56,6 +58,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 	});
 		$('#parvis_view').click(function(){	
 			$(this).css('visibility', 'hidden');
@@ -71,6 +74,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 	});	
 		$('#oculus_view').click(function(){	
 			$(this).css('visibility', 'hidden');
@@ -86,6 +90,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 	});
 		$('#motorsmob_view').click(function(){	
 			$(this).css('visibility', 'hidden');
@@ -102,6 +107,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#holyshield_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 	});
 		$('#chickendoom_view').click(function(){	
 			$(this).css('visibility', 'hidden');
@@ -118,6 +124,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 	});
 		$('#realhuman_view').click(function(){	
 			$(this).css('visibility', 'hidden');
@@ -135,6 +142,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 	});
 		$('#holyshield_view').click(function(){	
 			$('#holyshield_vimeo').css('display','none');
@@ -150,7 +158,8 @@ $('#holyshield_vimeo').css('display','none');
 			$('#realhuman_view').css('visibility', 'hidden');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#holyshield_view').css('visibility', 'hidden');
-			('#3D_scanning_view').css('visibility', 'hidden');
+			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 
 	});
 		$('#custom_3D_view').click(function(){	
@@ -168,11 +177,31 @@ $('#holyshield_vimeo').css('display','none');
 			$('#chickendoom_view').css('visibility', 'hidden');
 			$('#custom_3D_view').css('visibility', 'hidden');
 			$('#holyshield_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
 			
 	});
 		$('#3D_scanning_view').click(function(){	
 			$(this).css('visibility', 'hidden');
 		});			
 
+
+	$('#cardboard').click(function(){
+			$('#cardboard_view').css('visibility', 'visible');
+				$('#typerider_view').css('visibility', 'hidden');
+				$('#parvis_view').css('visibility', 'hidden');
+				$('#oculus_view').css('visibility', 'hidden');
+				$('#motorsmob_view').css('visibility', 'hidden');
+				$('#realhuman_view').css('visibility', 'hidden');
+				$('#chickendoom_view').css('visibility', 'hidden');
+				$('#custom_3D_view').css('visibility', 'hidden');
+				$('#holyshield_view').css('visibility', 'hidden');
+				
+		});
+			$('#cardboard_view').click(function(){	
+				$(this).css('visibility', 'hidden');
+			});	
+
+
 });
+
 

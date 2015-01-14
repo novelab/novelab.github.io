@@ -23,6 +23,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#3D_scanning_view').css('visibility', 'hidden');
 			$('#cardboard_view').css('visibility', 'hidden');
 			$('#remotectrl_view').css('visibility', 'hidden');
+			$('#remotectrl_elec_view').css('visibility','hidden');
 			
 	});
 	
@@ -224,11 +225,27 @@ $('#holyshield_vimeo').css('display','none');
 				$('#chickendoom_view').css('visibility', 'hidden');
 				$('#custom_3D_view').css('visibility', 'hidden');
 				$('#holyshield_view').css('visibility', 'hidden');
+				$('#remotectrl_elec_view').css('visibility','hidden');
 				
 		});
-			$('#remotectrl_view').click(function(){	
+		$('#remotectrl_view').click(function(){	
 				$(this).css('visibility', 'hidden');
-			});	
+		});	
+
+		$('#next_remotectrl_view').click(function(){
+			$('#remotectrl_elec_view').css('visibility','visible');
+			//$('#remotectrl_view').css('visibility', 'hidden');
+		});
+		
+		$('#remotectrl_elec_view').click(function(){
+				$(this).css('visibility', 'hidden');
+		});
+
+		$('#prev_remotectrl_elec_view').click(function(){
+			$('#remotectrl_view').css('visibility', 'visible');
+			$('#remotectrl_elec_view').css('visibility','hidden');
+		});
+	
 
 
 });

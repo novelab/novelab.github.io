@@ -154,6 +154,34 @@ a {
     z-index: 100;
 }
 
+.right-arrow{
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+	right: 0px;
+    overflow: hidden;
+    border: medium none;
+    background: url('images/rightArrow.png') no-repeat scroll center center transparent;
+    text-indent: 100%;
+    outline: medium none;
+    z-index: 100;
+}
+
+.left-arrow{
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+	left: 0px;
+    overflow: hidden;
+    border: medium none;
+    background: url('images/leftArrow.png') no-repeat scroll center center transparent;
+    text-indent: 100%;
+    outline: medium none;
+    z-index: 100;
+}
+
 
 
 /* this is for ipad landscape/protrait mode */ 

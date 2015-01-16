@@ -5,7 +5,23 @@ $('#typerider_vimeo').css('display','none');
 $('#chickendoom_vimeo').css('display','none');
 $('#holyshield_vimeo').css('display','none');
 
+	$('.overlay-close').click(function(){
+		$('#typerider_view').css('visibility', 'hidden');
+		$('body').css('overflow', 'hidden');
 
+			$('#dentressengle_view').css('visibility', 'hidden');
+			$('#parvis_view').css('visibility', 'hidden');
+			$('#oculus_view').css('visibility', 'hidden');
+			$('#motorsmob_view').css('visibility', 'hidden');
+			$('#realhuman_view').css('visibility', 'hidden');
+			$('#holyshield_view').css('visibility', 'hidden');
+			$('#chickendoom_view').css('visibility', 'hidden');
+			$('#custom_3D_view').css('visibility', 'hidden');
+			$('#3D_scanning_view').css('visibility', 'hidden');
+			$('#cardboard_view').css('visibility', 'hidden');
+			$('#remotectrl_view').css('visibility', 'hidden');
+			$('#remotectrl_elec_view').css('visibility','hidden');
+	})
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#typerider').click(function(){
 
@@ -249,6 +265,7 @@ $('#holyshield_vimeo').css('display','none');
 	$('#remotectrl').click(function(){
 			$('#remotectrl_view').css('visibility', 'visible');
 			$('body').css('overflow', 'hidden');
+			$('#remotectrl_view').find('.articles').scrollTop(0);
 				$('#cardboard_view').css('visibility', 'hidden');
 				$('#typerider_view').css('visibility', 'hidden');
 				$('#parvis_view').css('visibility', 'hidden');
@@ -262,12 +279,16 @@ $('#holyshield_vimeo').css('display','none');
 				
 		});
 	<!-- To quit the pop-up and reactivate the scrool -->
-		$('#remotectrl_view').click(function(){
-					$(this).css('visibility', 'hidden');
-					$('body').css('overflow', 'auto');
+		$('#remotectrl_view').click(function(event){
+					if($(event.target).attr('id') == 'remotectrl_view'){
+						$(this).css('visibility', 'hidden');
+						$('body').css('overflow', 'auto');	
+					}
+					
 		});	
 
 		$('#next_remotectrl_view').click(function(){
+			$('#remotectrl_elec_view').find('.articles').scrollTop(0);
 			$('#remotectrl_elec_view').css('visibility','visible');
 			$('#remotectrl_view').css('visibility','hidden');
 			$('body').css('overflow', 'hidden');
@@ -275,8 +296,10 @@ $('#holyshield_vimeo').css('display','none');
 		});
 		<!-- To quit the pop-up and reactivate the scrool -->
 		$('#remotectrl_elec_view').click(function(){
-				$(this).css('visibility', 'hidden');
-				$('body').css('overflow', 'auto');			
+				if($(event.target).attr('id') == 'remotectrl_elec_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}		
 		});
 
 		$('#prev_remotectrl_elec_view').click(function(){

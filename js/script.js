@@ -255,7 +255,7 @@ $('#holyshield_vimeo').css('display','none');
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#3D_scanning_view').click(function(){	
 			if($(event.target).attr('id') == '3D_scanning_view'){
-					$('#playerID'.get(0).stopVideo();
+					$('#playerID').get(0).stopVideo();
 					$(this).css('visibility', 'hidden');
 					$('body').css('overflow', 'auto');	
 				}

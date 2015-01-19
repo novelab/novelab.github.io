@@ -6,9 +6,9 @@ $('#chickendoom_vimeo').css('display','none');
 $('#holyshield_vimeo').css('display','none');
 
 	$('.overlay-close').click(function(){
-		$('#typerider_view').css('visibility', 'hidden');
-		$('body').css('overflow', 'hidden');
-
+		
+		$('body').css('overflow', 'auto');
+			$('#typerider_view').css('visibility', 'hidden');
 			$('#dentressengle_view').css('visibility', 'hidden');
 			$('#parvis_view').css('visibility', 'hidden');
 			$('#oculus_view').css('visibility', 'hidden');
@@ -44,11 +44,12 @@ $('#holyshield_vimeo').css('display','none');
 			
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
-		$('#typerider_view').click(function(){	
-			$('#typerider_vimeo').css('display','none');
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');	
-			
+		$('#typerider_view').click(function(){
+			if($(event.target).attr('id') == 'typerider_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');
+					$('#typerider_vimeo').css('display','none');	
+				}			
 		});
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#dentressengle').click(function(){
@@ -69,8 +70,10 @@ $('#holyshield_vimeo').css('display','none');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#dentressengle_view').click(function(){		
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'dentressengle_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#parvis').click(function(){
@@ -89,8 +92,10 @@ $('#holyshield_vimeo').css('display','none');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#parvis_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'parvis_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#oculus').click(function(){
@@ -109,8 +114,10 @@ $('#holyshield_vimeo').css('display','none');
 	});	
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#oculus_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'oculus_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#motorsmob').click(function(){
@@ -129,8 +136,10 @@ $('#holyshield_vimeo').css('display','none');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#motorsmob_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'motorsmob_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+			}
 		});
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#chickendoom').click(function(){
@@ -149,10 +158,12 @@ $('#holyshield_vimeo').css('display','none');
 			$('#remotectrl_view').css('visibility', 'hidden');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
-		$('#chickendoom_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('#chickendoom_vimeo').css('display','none');
-			$('body').css('overflow', 'auto');
+		$('#chickendoom_view').click(function(){
+			if($(event.target).attr('id') == 'chickendoom_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');
+					$('#chickendoom_vimeo').css('display','none');	
+				}	
 		});	
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#realhuman').click(function(){
@@ -171,8 +182,10 @@ $('#holyshield_vimeo').css('display','none');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#realhuman_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'realhuman_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});	
 		
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
@@ -193,9 +206,11 @@ $('#holyshield_vimeo').css('display','none');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#holyshield_view').click(function(){	
-			$('#holyshield_vimeo').css('display','none');
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'holyshield_view'){
+					$('#holyshield_vimeo').css('display','none');
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});			
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#custom_3D').click(function(){
@@ -215,8 +230,10 @@ $('#holyshield_vimeo').css('display','none');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#custom_3D_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'custom_3D_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});			
 
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
@@ -237,8 +254,11 @@ $('#holyshield_vimeo').css('display','none');
 	});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#3D_scanning_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == '3D_scanning_view'){
+					$('#playerID'.get(0).stopVideo();
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});			
 
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
@@ -258,8 +278,10 @@ $('#holyshield_vimeo').css('display','none');
 		});
 	<!-- To quit the pop-up and reactivate the scrool -->
 		$('#cardboard_view').click(function(){	
-			$(this).css('visibility', 'hidden');
-			$('body').css('overflow', 'auto');
+			if($(event.target).attr('id') == 'cardboard_view'){
+					$(this).css('visibility', 'hidden');
+					$('body').css('overflow', 'auto');	
+				}
 		});	
 	<!-- To activate the pop-up and desactivate the global the scrool -->	
 	$('#remotectrl').click(function(){

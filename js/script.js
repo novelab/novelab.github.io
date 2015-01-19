@@ -4,6 +4,8 @@ jQuery(document).ready(function(){
 $('#typerider_vimeo').css('display','none');
 $('#chickendoom_vimeo').css('display','none');
 $('#holyshield_vimeo').css('display','none');
+$('#remotectrl_explanation_video').css('display','none');
+$('#3D_scanning_video').css('display','none');
 
 	$('.overlay-close').click(function(){
 		
@@ -33,6 +35,11 @@ $('#holyshield_vimeo').css('display','none');
 			$('#cardboard_view').css('visibility', 'hidden');
 			$('#remotectrl_view').css('visibility', 'hidden');
 			$('#remotectrl_elec_view').css('visibility','hidden');
+			$('#remotectrl_explanation_video').css('display','none');
+			$('#3D_scanning_video').css('display','none');
+			$('#typerider_vimeo').css('display','none');	
+			$('#chickendoom_vimeo').css('display','none');	
+			$('#holyshield_vimeo').css('display','none');	
 	})
 	<!-- To activate the pop-up and desactivate the global the scroll -->	
 	$('#typerider').click(function(){
@@ -266,6 +273,7 @@ $('#holyshield_vimeo').css('display','none');
 	$('#3D_scanning').click(function(){
 		$('#3D_scanning_view').find('.articles').scrollTop(0);
 		$('#3D_scanning_view').css('visibility', 'visible');
+		$('#3D_scanning_video').css('display','inline');
 		$('body').css('overflow', 'hidden');
 			$('#typerider_view').css('visibility', 'hidden');
 			$('#parvis_view').css('visibility', 'hidden');
@@ -286,6 +294,7 @@ $('#holyshield_vimeo').css('display','none');
 					$('#3D_scanning_video').attr("src","");
 					$('#3D_scanning_video').attr("src",video);
 					$(this).css('visibility', 'hidden');
+					$('#3D_scanning_video').css('display','none');
 					$('body').css('overflow', 'auto');	
 				}
 		});			
@@ -317,6 +326,7 @@ $('#holyshield_vimeo').css('display','none');
 	$('#remotectrl').click(function(){
 			$('#remotectrl_view').css('visibility', 'visible');
 			$('body').css('overflow', 'hidden');
+			$('#remotectrl_explanation_video').css('display','inline');
 			$('#remotectrl_view').find('.articles').scrollTop(0);
 				$('#cardboard_view').css('visibility', 'hidden');
 				$('#typerider_view').css('visibility', 'hidden');
@@ -336,6 +346,7 @@ $('#holyshield_vimeo').css('display','none');
 						video = $('#remotectrl_explanation_video').attr("src");
 						$('#remotectrl_explanation_video').attr("src","");
 						$('#remotectrl_explanation_video').attr("src",video);
+						$('#remotectrl_explanation_video').css('display','none');
 						$(this).css('visibility', 'hidden');
 						$('body').css('overflow', 'auto');	
 					}
@@ -346,6 +357,7 @@ $('#holyshield_vimeo').css('display','none');
 			video = $('#remotectrl_explanation_video').attr("src");
 					$('#remotectrl_explanation_video').attr("src","");
 					$('#remotectrl_explanation_video').attr("src",video);
+					$('#remotectrl_explanation_video').css('display','none');
 			$('#remotectrl_elec_view').find('.articles').scrollTop(0);
 			$('#remotectrl_elec_view').css('visibility','visible');
 			$('#remotectrl_view').css('visibility','hidden');
@@ -364,6 +376,7 @@ $('#holyshield_vimeo').css('display','none');
 			$('#remotectrl_view').css('visibility', 'visible');
 			$('body').css('overflow', 'hidden');
 			$('#remotectrl_elec_view').css('visibility','hidden');
+			$('#remotectrl_explanation_video').css('display','inline');
 		});
 	
 

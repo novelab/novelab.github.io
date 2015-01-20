@@ -35,11 +35,14 @@ $('#3D_scanning_video').css('display','none');
 			$('#cardboard_view').css('visibility', 'hidden');
 			$('#remotectrl_view').css('visibility', 'hidden');
 			$('#remotectrl_elec_view').css('visibility','hidden');
+			$('#virtualvisitSuez_view').css('visibility','hidden');
+
 			$('#remotectrl_explanation_video').css('display','none');
 			$('#3D_scanning_video').css('display','none');
 			$('#typerider_vimeo').css('display','none');	
 			$('#chickendoom_vimeo').css('display','none');	
 			$('#holyshield_vimeo').css('display','none');	
+
 	})
 	<!-- To activate the pop-up and desactivate the global the scroll -->	
 	$('#typerider').click(function(){
@@ -379,6 +382,36 @@ $('#3D_scanning_video').css('display','none');
 			$('#remotectrl_explanation_video').css('display','inline');
 		});
 	
+		<!-- To activate the pop-up and desactivate the global the scroll -->	
+	$('#virtualvisitSuez').click(function(){
+			$('#virtualvisitSuez_view').css('visibility', 'visible');
+			$('body').css('overflow', 'hidden');
+			$('#remotectrl_explanation_video').css('display','inline');
+			$('#remotectrl_view').find('.articles').scrollTop(0);
+				$('#cardboard_view').css('visibility', 'hidden');
+				$('#typerider_view').css('visibility', 'hidden');
+				$('#parvis_view').css('visibility', 'hidden');
+				$('#oculus_view').css('visibility', 'hidden');
+				$('#motorsmob_view').css('visibility', 'hidden');
+				$('#realhuman_view').css('visibility', 'hidden');
+				$('#chickendoom_view').css('visibility', 'hidden');
+				$('#custom_3D_view').css('visibility', 'hidden');
+				$('#holyshield_view').css('visibility', 'hidden');
+				$('#remotectrl_elec_view').css('visibility','hidden');
+				
+		});
+	<!-- To quit the pop-up and reactivate the scroll -->
+		$('#virtualvisitSuez_view').click(function(event){
+					if($(event.target).attr('id') == 'virtualvisitSuez_view'){
+						video = $('#remotectrl_explanation_video').attr("src");
+						$('#remotectrl_explanation_video').attr("src","");
+						$('#remotectrl_explanation_video').attr("src",video);
+						$('#remotectrl_explanation_video').css('display','none');
+						$(this).css('visibility', 'hidden');
+						$('body').css('overflow', 'auto');	
+					}
+					
+		});	
 
 
 });

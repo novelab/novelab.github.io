@@ -40,6 +40,7 @@ $('#3D_scanning_video').css('display','none');
 			$('#remotectrl_elec_view').css('visibility','hidden');
 			$('#virtualvisitSuez_view').css('visibility','hidden');
 
+			$('#virtual_visit_FN_video').css('display','none');
 			$('#remotectrl_explanation_video').css('display','none');
 			$('#remotectrl_live_video').css('display','none');
 			$('#3D_scanning_video').css('display','none');
@@ -399,9 +400,8 @@ $('#3D_scanning_video').css('display','none');
 	$('#virtualvisitSuez').click(function(){
 			$('#virtualvisitSuez_view').css('visibility', 'visible');
 			$('body').css('overflow', 'hidden');
-			$('#remotectrl_explanation_video').css('display','inline');
-			$('#remotectrl_live_video').css('display','inline');
-			$('#remotectrl_view').find('.articles').scrollTop(0);
+			$('#virtual_visit_FN_video').css('display','inline');
+			$('#virtualvisitSuez_view').find('.articles').scrollTop(0);
 				$('#cardboard_view').css('visibility', 'hidden');
 				$('#typerider_view').css('visibility', 'hidden');
 				$('#parvis_view').css('visibility', 'hidden');
@@ -417,14 +417,10 @@ $('#3D_scanning_video').css('display','none');
 	<!-- To quit the pop-up and reactivate the scroll -->
 		$('#virtualvisitSuez_view').click(function(event){
 					if($(event.target).attr('id') == 'virtualvisitSuez_view'){
-						video = $('#remotectrl_explanation_video').attr("src");
-						$('#remotectrl_explanation_video').attr("src","");
-						$('#remotectrl_explanation_video').attr("src",video);
-						$('#remotectrl_explanation_video').css('display','none');
-						video = $('#remotectrl_live_video').attr("src");
-						$('#remotectrl_live_video').attr("src","");
-						$('#remotectrl_live_video').attr("src",video);
-						$('#remotectrl_live_video').css('display','none');
+						video = $('#virtual_visit_FN_video').attr("src");
+						$('#virtual_visit_FN_video').attr("src","");
+						$('#virtual_visit_FN_video').attr("src",video);
+						$('#virtual_visit_FN_video').css('display','none');
 						$(this).css('visibility', 'hidden');
 						$('body').css('overflow', 'auto');	
 					}

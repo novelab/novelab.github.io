@@ -40,6 +40,7 @@ $('#3D_scanning_video').css('display','none');
 			$('#remotectrl_elec_view').css('visibility','hidden');
 			$('#virtualvisitSuez_view').css('visibility','hidden');
 
+			$('#VR_Spaceship_Flight_video').css('display','none');
 			$('#virtual_visit_FN_video').css('display','none');
 			$('#remotectrl_explanation_video').css('display','none');
 			$('#remotectrl_live_video').css('display','none');
@@ -131,6 +132,7 @@ $('#3D_scanning_video').css('display','none');
 		});
 	<!-- To activate the pop-up and desactivate the global the scroll -->	
 	$('#oculus').click(function(){
+		$('#VR_Spaceship_Flight_video').css('display','inline');
 		$('#oculus_view').find('.articles').scrollTop(0);
 		$('#oculus_view').css('visibility', 'visible');
 		$('body').css('overflow', 'hidden');
@@ -148,6 +150,10 @@ $('#3D_scanning_video').css('display','none');
 	<!-- To quit the pop-up and reactivate the scroll -->
 		$('#oculus_view').click(function(){	
 			if($(event.target).attr('id') == 'oculus_view'){
+				video = $('#VR_Spaceship_Flight_video').attr("src");
+						$('#VR_Spaceship_Flight_video').attr("src","");
+						$('#VR_Spaceship_Flight_video').attr("src",video);
+						$('#VR_Spaceship_Flight_video').css('display','none');
 					$(this).css('visibility', 'hidden');
 					$('body').css('overflow', 'auto');	
 				}
